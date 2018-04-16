@@ -1,0 +1,52 @@
+body{margin:0;}
+
+.container {
+  width: 95%;
+  //max-width: 1170px;
+  margin:0 auto;
+}
+
+$fg-columns : 12;
+@mixin grid-sizes( $namespace ) {
+  @for $i from 1 through $fg-columns{
+      // Don't include the .off class for the last column
+      
+        .col-#{$namespace}-#{$i} {
+          flex-basis: percentage($i / $fg-columns);
+      
+        }
+  }
+}
+body { margin: 0; }
+div[class*="col-"] {
+  //background: #ff00ff;
+  //min-height: 200px;
+  background-clip: content-box;
+  margin: 15px 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+//
+//div[class*="col-"]:nth-child(2){
+//  padding: 0px;
+//}
+//
+//div[class*="col-"]:nth-child(1){
+//  padding: 0px;
+//}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+@include grid-sizes ("xs")
+@media (min-width: 768px) {
+  @include grid-sizes ("sm")
+}
+@media (min-width: 992px) {
+  @include grid-sizes ("md")
+}
+@media (min-width: 1200px) {
+  @include grid-sizes ("lg")
+}

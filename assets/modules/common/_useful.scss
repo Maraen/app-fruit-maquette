@@ -1,0 +1,85 @@
+//fonts
+
+p{
+  font-family: 'Andika', sans-serif;
+  margin: 0;
+}
+
+
+//removing the bullet points from lists
+ul li{
+ list-style-type: none;
+}
+
+
+//
+// Creating span classe to target text to transform in uppercase
+.uppercase{
+	text-transform: uppercase;
+}
+
+//
+// Creating the different lines, 2 lines on desktop and single line on mobile
+.line{
+  height:2px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width:992px){
+  .line{
+  border-bottom:solid 1px #d2d2d2;
+  border-top:solid 1px #d2d2d2;
+  }
+}
+
+@media (min-width:300px) and (max-width:992px){
+  .line{
+  background-color:black;
+  }
+}
+
+.text-align-center{
+  text-align: center;
+}
+
+
+// permits easy creations of relative div.
+.relative{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+}
+
+// removes padding
+.no-pad{
+  padding:0;
+}
+
+// permits easy creation of float left and right
+.fleft{
+  float: left;
+}
+
+.fright{
+  float:right;
+}
+
+
+figure{
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+}
+
+img{
+  //height: 100%;
+  //width: 100%;
+  top: 38.5px;
+  left: 10px;
+  position: absolute;
+  z-index: 1;
+}

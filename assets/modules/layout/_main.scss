@@ -1,0 +1,64 @@
+body{
+	background-color: $dark-grey;
+}
+
+
+.div-folded{
+	width: 100%;
+	min-height: 125px;
+	background-color: $white;
+	border: 1px solid $dark-grey;
+	margin-top: 1px;
+	position: relative;
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+
+	&:active{
+		.fruit-name{
+			color: $peach
+		}
+	}
+}
+
+.active > .fruit-name{
+	color: $peach
+}
+
+.description{
+	background:$light-grey;
+	width: 100%;
+	display: none;
+	border-top: 1px solid $peach;
+}
+
+.fruit-name > p{
+	font-size: 30px;
+	line-height: 125px;
+	margin-left: 80px;
+}
+
+.x-cross{
+  width:22px;
+  height:22px;
+  position: absolute;
+  top: 51.5px;
+  right: 40px;
+}
+
+div[class*="cross-bar-"]{
+  top:0px;
+  left:10px;
+  width:2px;
+  height:100%;
+  background-color:black;
+}
+
+.cross-bar-1{
+  position:absolute;
+}
+
+.cross-bar-2{
+  position:absolute;
+  transform: rotate(90deg)
+}

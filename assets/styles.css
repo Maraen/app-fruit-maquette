@@ -186,40 +186,36 @@ img {
   position: absolute;
   z-index: 1; }
 
-header div {
-  background: linear-gradient(45deg, #f5b88e 0%, #b0db44 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  width: 100%;
-  height: 160px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center; }
-
-header h1 {
-  font-family: 'Amatic SC', cursive;
-  font-weight: 700;
-  font-size: 48px;
-  /*margin: 0 auto;
-	text-align: center;*/
-  line-height: 160px;
-  color: #ffffff;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-  align-self: center;
-  order: 2;
-  margin-left: 15px; }
-
 header {
   margin-bottom: 20px; }
-
-header img {
-  top: auto;
-  left: auto;
-  position: inherit; }
-
-header figure {
-  align-self: center;
-  order: 1; }
+  header div {
+    background: linear-gradient(45deg, #f5b88e 0%, #b0db44 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  header h1 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 48px;
+    /*margin: 0 auto;
+		text-align: center;*/
+    line-height: 160px;
+    color: #ffffff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    align-self: center;
+    order: 2;
+    margin-left: 15px; }
+  header img {
+    top: auto;
+    left: auto;
+    position: inherit; }
+  header figure {
+    align-self: center;
+    order: 1; }
 
 body {
   background-color: #ebebeb;
@@ -235,11 +231,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row; }
-  .div-folded:active .fruit-name {
+  .div-folded.active .fruit-name {
     color: #e69f70; }
-
-.active > .fruit-name {
-  color: #e69f70; }
 
 .description {
   background: #fafafa;
@@ -274,14 +267,13 @@ div[class*="cross-bar-"]{
   width:2px;
   height:100%;
   background-color:black;
+  position:absolute;
 }
 
 .cross-bar-1{
-  position:absolute;
 }
 
 .cross-bar-2{
-  position:absolute;
   transform: rotate(90deg)
 } */
 .x-cross {

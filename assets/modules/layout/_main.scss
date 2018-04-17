@@ -1,9 +1,10 @@
+// Applying background to body and spacing at the bottom of the screen
 body{
 	background-color: $dark-grey;
 	padding-bottom: 20px;
 }
 
-
+// Creation of the basic box in the accordion
 .div-folded{
 	width: 100%;
 	min-height: 125px;
@@ -15,17 +16,14 @@ body{
 	flex-wrap:wrap;
 	flex-direction:row;
 
-	&:active{
+	&.active{ //whenever the div-folded get's the active class it changes the fruit-name color
 		.fruit-name{
 			color: $peach
 		}
 	}
 }
 
-.active > .fruit-name{
-	color: $peach
-}
-
+// Content of the accordion is in display none by default
 .description{
 	background:$light-grey;
 	width: 100%;
@@ -34,6 +32,7 @@ body{
 	color: #4c4c4c;
 }
 
+//targeting the "titles" of the accordion box, did not want to make them titles though
 .fruit-name > p{
 	font-size: 30px;
 	line-height: 125px;
@@ -49,6 +48,7 @@ ul li{
 	}
 }
 
+// Old Creation of the cross, kept it here as a memory of the unconvenient way of using 3 divs.
 /* .x-cross{
   width:22px;
   height:22px;
@@ -63,17 +63,18 @@ div[class*="cross-bar-"]{
   width:2px;
   height:100%;
   background-color:black;
+  position:absolute;
 }
 
 .cross-bar-1{
-  position:absolute;
 }
 
 .cross-bar-2{
-  position:absolute;
   transform: rotate(90deg)
 } */
 
+// Creation of the Cross to be only in 1 div
+// the container of the cross
 .x-cross{
   width: 20px;
   height: 20px;
@@ -82,7 +83,7 @@ div[class*="cross-bar-"]{
   top: 65px;
   transform: translateY(-50%);
 
-  &::after,
+  &::after,// creating the branches of the cross
   &::before{
     content: "";
     display: block;
@@ -94,11 +95,12 @@ div[class*="cross-bar-"]{
     transition: all 1s ease-in-out; 
     right: 0;
   }
+  // rotating one of the branches to create a cross
   &::after{
     transform: rotate(90deg);
     left: 0;
   }
-  
+  // rotation of cross into arrow after activation
   &.active{
     &::before{
       transform: rotate(-405deg);

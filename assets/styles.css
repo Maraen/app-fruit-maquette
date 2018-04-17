@@ -187,34 +187,43 @@ img {
   z-index: 1; }
 
 header div {
-  background: #f5b88e;
-  /* Old browsers */
-  background: -moz-linear-gradient(45deg, #f5b88e 0%, #b0db44 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #f5b88e 0%, #b0db44 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(45deg, #f5b88e 0%, #b0db44 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5b88e', endColorstr='#b0db44',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
   width: 100%;
-  height: 160px; }
+  height: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center; }
 
 header h1 {
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
   font-size: 48px;
-  margin: 0 auto;
-  text-align: center;
+  /*margin: 0 auto;
+	text-align: center;*/
   line-height: 160px;
   color: #ffffff;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  align-self: center;
+  order: 2;
+  margin-left: 15px; }
 
 header {
   margin-bottom: 20px; }
 
+header img {
+  top: auto;
+  left: auto;
+  position: inherit; }
+
+header figure {
+  align-self: center;
+  order: 1; }
+
 body {
-  background-color: #ebebeb; }
+  background-color: #ebebeb;
+  padding-bottom: 20px; }
 
 .div-folded {
   width: 100%;
@@ -236,32 +245,72 @@ body {
   background: #fafafa;
   width: 100%;
   display: none;
-  border-top: 1px solid #e69f70; }
+  border-top: 1px solid #e69f70;
+  color: #4c4c4c; }
 
 .fruit-name > p {
   font-size: 30px;
   line-height: 125px;
   margin-left: 80px; }
 
-.x-cross {
-  width: 22px;
-  height: 22px;
+ul li {
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 20px; }
+  ul li p {
+    padding-right: 10%; }
+
+/* .x-cross{
+  width:22px;
+  height:22px;
   position: absolute;
   top: 51.5px;
-  right: 40px; }
+  right: 40px;
+}
 
-div[class*="cross-bar-"] {
-  top: 0px;
-  left: 10px;
-  width: 2px;
-  height: 100%;
-  background-color: black; }
+div[class*="cross-bar-"]{
+  top:0px;
+  left:10px;
+  width:2px;
+  height:100%;
+  background-color:black;
+}
 
-.cross-bar-1 {
-  position: absolute; }
+.cross-bar-1{
+  position:absolute;
+}
 
-.cross-bar-2 {
+.cross-bar-2{
+  position:absolute;
+  transform: rotate(90deg)
+} */
+.x-cross {
+  width: 20px;
+  height: 20px;
   position: absolute;
-  transform: rotate(90deg); }
+  right: 50px;
+  top: 65px;
+  transform: translateY(-50%); }
+  .x-cross::after, .x-cross::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    width: 20px;
+    top: 50%;
+    transition: all 1s ease-in-out;
+    right: 0; }
+  .x-cross::after {
+    transform: rotate(90deg);
+    left: 0; }
+  .x-cross.active::before {
+    transform: rotate(-405deg);
+    right: -2px;
+    width: 15px; }
+  .x-cross.active::after {
+    width: 15px;
+    transform: rotate(405deg);
+    left: -2px; }
 
 /*# sourceMappingURL=styles.css.map */
